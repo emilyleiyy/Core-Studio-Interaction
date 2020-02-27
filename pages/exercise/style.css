@@ -1,0 +1,34 @@
+body{
+	font-family: 'Arquette Regular', sans-serif;
+	display: grid;
+	grid-template-columns: 20em 5em auto auto;
+	grid-auto-rows: min-content;
+	grid-gap: 2rem;
+}
+
+h1{
+	color: lightgrey;
+	font-weight: lighter;
+	font-size: 12pt;
+	text-align: right;
+	grid-column: 2;
+	grid-row: auto;
+}
+
+h2{
+	color: black;
+	font-weight: lighter;
+	font-size: 12pt;
+	grid-column: 3;
+	grid-row: auto;
+}
+
+h3{
+	position: fixed;
+	left: 3rem;
+	top: 20rem;
+	font-size: 20pt;
+	align-items: flex-start;
+	flex-direction: row;
+	justify-content: space-between;
+}
