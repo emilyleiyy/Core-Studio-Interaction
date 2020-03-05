@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demo</title>
+	<script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<script type="text/javascript">
+		d3.csv('https://raw.githubusercontent.com/emilyleiyy/Core-Studio-Interaction/master/pages/demo/Catalogue%20Content%20Data%20-%20Sheet1.csv')
+		.then(
+			function(data){
+				console.log(data)
+				viewData(data, 'main')
+			}
+			//run funciton with the dta here
+			)
+		.catch(function(error){
+			//catch error
+		})
+		function updateData(data, location_id){
+			//select  the elemnt that I will write the data in
+			el document.querySelector('#'+ location_id)
+
+			//iterate over each item and do something with its attributes
+			data. forEach(function(item){
+				div=document.createElement('div')
+				div. setAttribute('class','card')
+				div.classList.add(item['White Tea'])
+				aligner=document.createElement('div')
+				aligner. setAttribute('class','aligner')
+				h1= document.createElement('h1')
+				h1.innerHTML=item['Categories']
+				mask=document.createElement('div')
+				mask.setAttribute('class', 'mask')
+				mask.appendChild(img)
+				aligner. appendChild(mask)
+				aligner. appendChild(h1)
+				div.appendChild(aligner)
+				el.appendChild(div)
+				})
+		}  
+</script>
+<style type="text/css">
+	body.html{
+		font-family: 'Helvetica Neue', snas-serif;
+	}
+	.card{
+		background-color: #f2f2f2;
+		width: 40%;
+		height: 30vh;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		margin: 2%;
+		display: inline-flex;
+		vertical-align: top;
+	}
+	.suv{
+		background-color: #1d1d1d;
+		color: white;
+	}
+	.sedan{
+		background-color: #cccccc;
+	}
+	.mini{
+
+	}
+</style>
+<body>
+	<div id="main"></div>
+
+</body>
+</html>
