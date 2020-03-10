@@ -18,24 +18,17 @@
 		})
 		function updateData(data, location_id){
 			//select  the elemnt that I will write the data in
-			el document.querySelector('#'+ location_id)
+			el = document.querSelctor('main'+ location_id)
+			//will take the id of whatever is passed through
+			//write everthing as text to this location
+
+			//select just one item
+			//el.innerHTML = data[0]['The Name of Player']
 
 			//iterate over each item and do something with its attributes
 			data. forEach(function(item){
-				div=document.createElement('div')
-				div. setAttribute('class','card')
-				div.classList.add(item['White Tea'])
-				aligner=document.createElement('div')
-				aligner. setAttribute('class','aligner')
-				h1= document.createElement('h1')
-				h1.innerHTML=item['Categories']
-				mask=document.createElement('div')
-				mask.setAttribute('class', 'mask')
-				mask.appendChild(img)
-				aligner. appendChild(mask)
-				aligner. appendChild(h1)
-				div.appendChild(aligner)
-				el.appendChild(div)
+				h1= document. createElement('h1')
+				h1. innerHTML= item['Name']
 				})
 		}  
 </script>
