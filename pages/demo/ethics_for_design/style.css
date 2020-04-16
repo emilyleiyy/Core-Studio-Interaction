@@ -1,0 +1,22 @@
+.horizontal{
+  padding: 30px;
+  float: left;
+  width: 25%;
+}
+
+#a{
+  background-color: white;
+}
+#b{
+  background-color: black;
+  color: white;
+}
+#c{
+  background-color: red;
+}
+
+@media screen and (max-width: 800px){
+  .horizontal{
+    width: 50%;
+  }
+}
