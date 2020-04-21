@@ -1,0 +1,30 @@
+Name,Type,Brewing Method1,Brewing Method2,Production Method,Production Method2,Production Method3,Production Method4,Production Method5,Country
+Bai Hao Yin Zhen,White Tea,160 to 190 degrees F,2 to 5 minutes,withered,dried,   N,   N,   N,China
+Darjeeling White Tea,White Tea,160 to 190 degrees F,2 to 5 minutes,withered,dried,   N,   N,   N,India
+Gong Mei,White Tea,160 to 190 degrees F,2 to 5 minutes,withered,dried,   N,   N,   N,China
+Chai Tea,Black Tea,200 to 212 degrees F,3 to 5 minutes,withered,rolled,   N,   N,   N,India
+Assam,Black Tea,200 to 212 degrees F,3 to 5 minutes,withered,rolled,   N,   N,   N,India
+Rooibos Tea,Black Tea,200 to 212 degrees F,3 to 5 minutes,withered,rolled,   N,   N,   N,Africa
+Earl Grey,Black Tea,200 to 212 degrees F,3 to 5 minutes,withered,rolled,   N,   N,   N,England
+Darjelling,Black Tea,200 to 212 degrees F,3 to 5 minutes,withered,rolled,   N,   N,   N,India
+Chamomile Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,Europe
+Chrysanthemum Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,China
+Dandlion Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,America
+Hibiscus Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,Africa
+Nettle Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,Europe
+Peppermint Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,Europe
+Pau d'arco Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,America
+Raspberry Leaf Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,Europe
+Rose Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,China
+Senna Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,India
+Spearmint Tea,Herbal Tea,200 to 212 degrees F,5 to 7 minutes,withered,dried,   N,   N,   N,Europe
+Matcha Tea,Green Tea,160 to 180 degrees F,1 to 3 minutes,withered,fixed,dried,   N,   N,Japan
+Sencha Tea,Green Tea,160 to 180 degrees F,1 to 3 minutes,withered,fixed,dried,   N,   N,China
+Biluochun,Green Tea,160 to 180 degrees F,1 to 3 minutes,withered,fixed,dried,   N,   N,China
+Longjing,Green Tea,160 to 180 degrees F,1 to 3 minutes,withered,fixed,dried,   N,   N,China
+Baihao,Oolong Tea,185 to 205 degrees F,2 to 6 minutes,withered,rolled,oxidized,fixed,dried,China
+Da Hong Pao,Oolong Tea,185 to 205 degrees F,2 to 6 minutes,withered,rolled,oxidized,fixed,dried,China
+Tie Guan Yin,Oolong Tea,185 to 205 degrees F,2 to 6 minutes,withered,rolled,oxidized,fixed,dried,China
+Ripe,Pu-erh Tea,185 to 195 degrees F,3 to 4 minutes,withered,fixed,rolled,fermented,   N,China
+Aged raw pu-erh,Pu-erh Tea,185 to 195 degrees F,3 to 4 minutes,withered,fixed,rolled,fermented,   N,China
+Young raw pu-erh,Pu-erh Tea,185 to 195 degrees F,3 to 4 minutes,withered,fixed,rolled,fermented,   N,China

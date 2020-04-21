@@ -1,0 +1,66 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-02 14:27:09
+ * @LastEditTime: 2020-04-05 18:22:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \prototype2\html\type.html
+ -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Type</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="animate.css" />
+  </head>
+  <body>
+    <!--title-->
+    <h2>Type</h2>
+
+    <!--home&search-->
+    <a href="home.html" id="home">
+      <img src="assets/home.png" style="width: 25%;" />
+    </a>
+    <a id="search" href="search.html">
+      <img src="assets/search.png" style="width: 25%;" />
+    </a>
+
+    <div class="form">
+      <div class="fn-clear" id="main"></div>
+    </div>
+
+    <script src="./d3.v5.min.js"></script>
+    <script>
+      d3.csv(
+        "https://raw.githubusercontent.com/emilyleiyy/Core-Studio-Interaction/master/pages/project2/prototype2/Catalogue%20Content%20Data%20-%20Sheet1.csv"
+        // "./Catalogue Content Data - Sheet1.csv"
+      )
+        .then(function (data) {
+          console.log(data);
+          // filtering data function
+          // sedans = data.filter(function(d){
+          // 	return d.type=='sedan'
+          // })
+          sedans = data;
+          var html = "";
+          data.forEach((element) => {
+            html += `<div class="fl box">
+				<p class="tit">${element.Name}</p>
+				<p class="c1txt">${element.Country}<br>
+					White Tea</p>
+					<div class="fn-clear">
+						<div class="c2box">${element["Production Method"]}</div>
+							<div class="c2box">${element["Brewing Method"]}</div>
+					</div>
+			</div>`;
+          });
+          document.querySelector("#main").innerHTML = html;
+          // seeDetails(sedans)
+        })
+        .catch(function (error) {
+          // catch error
+        });
+    </script>
+  </body>
+</html>
