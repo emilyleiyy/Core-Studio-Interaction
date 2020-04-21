@@ -33,7 +33,7 @@
     <script src="./d3.v5.min.js"></script>
     <script>
       d3.csv(
-        "https://raw.githubusercontent.com/emilyleiyy/Core-Studio-Interaction/master/pages/project2/prototype2/Catalogue%20Content%20Data%20-%20Sheet1.csv"
+        "https://raw.githubusercontent.com/emilyleiyy/Core-Studio-Interaction/master/pages/project2/final/data.csv"
         // "./Catalogue Content Data - Sheet1.csv"
       )
         .then(function (data) {
@@ -50,8 +50,8 @@
 				<p class="c1txt">${element.Country}<br>
 					White Tea</p>
 					<div class="fn-clear">
-						<div class="c2box">${element["Production Method"]}</div>
-							<div class="c2box">${element["Brewing Method"]}</div>
+						<div class="c2box">${element["Production Method"]}<br>${element["Production Method2"]}<br>${element["Production Method3"]}<br>${element["Production Method4"]}<br>${element["Production Method5"]}</div>
+							<div class="c2box">${element["Brewing Method1"]}<br>${element["Brewing Method2"]}</div>
 					</div>
 			</div>`;
           });
