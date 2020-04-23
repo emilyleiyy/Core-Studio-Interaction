@@ -459,7 +459,8 @@ body #map .c6 .box {
   background-color: #a0ab9a;
   border-radius: 12px;
   padding: 40px 16px;
-  margin: 50px 60px;
+  margin: 50px 70px;
+  width: 20%;
 }
 
 .form .box .tit {
@@ -488,13 +489,12 @@ body #map .c6 .box {
 
 .form .box .c2box {
   margin: 10px 0;
-  height: 100px;
+  height: 110px;
   box-sizing: border-box;
   color: #fff;
 }
 
 .form .box .c2box:first-child {
-  border-bottom: 3px dashed #fff;
   box-sizing: border-box;
 }
 
@@ -505,6 +505,12 @@ body #map .c6 .box {
   line-height: 20px;
 }
 
+#second{
+  margin-top: 20px;
+line-height: 30px;
+border-top: 3px dashed #fff;
+padding-top: 30px;
+}
 
 
 
