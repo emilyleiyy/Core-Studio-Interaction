@@ -1,0 +1,103 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-02 14:27:09
+ * @LastEditTime: 2020-04-02 17:54:15
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \prototype2\html\recipes.html
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+	<link rel="stylesheet" type="text/css" href="animate.css">
+</head>
+<body>
+	<!--title-->
+	<h2>Recipes</h2>
+
+	<!--home&search-->
+	<a href="home.html" id="home">
+		<img src="assets/home.png">
+	</a>
+	<a id="search" href="search.html">
+		<img id="search" src="assets/search.png">
+	</a>
+	<div class="contentbox">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="https://www.teatulia.com/tea-recipes/red-white-tea-blue-sangria.htm" class="toptxt">Red, White (Tea) & Blue Sangria</a>
+					<p class="foottxt">
+						<span class="tit">link to the website</span>
+						<span class="txt">https://www.teatulia.com/tea-recipes/red-white-tea-blue-sangria.htm</span>
+					</p>
+				</div>
+				<div class="swiper-slide">					
+					<a href="https://www.teatulia.com/tea-recipes/matcha-ice-cream.html" class="toptxt">Matcha Ice Cream</a>
+					<p class="foottxt">
+						<span class="tit">link to the website</span>
+						<span class="txt">https://www.teatulia.com/tea-recipes/matcha-ice-cream.html</span>
+					</p></div>
+				<div class="swiper-slide">					
+					<a href="https://www.teatulia.com/pages/tea-entrees-recipes/tea-deviled-eggs.html" class="toptxt">Tea Deviled Eggs</a>
+					<p class="foottxt">
+						<span class="tit">link to the website</span>
+						<span class="txt">https://www.teatulia.com/pages/tea-entrees-recipes/tea-deviled-eggs.html</span>
+					</p></div>
+				<div class="swiper-slide">						
+					<a href="https://www.teatulia.com/tea-recipes/earl-of-bengal-cookies.html" class="toptxt">Earl of Bengal Cookies</a>
+					<p class="foottxt">
+						<span class="tit">link to the website</span>
+						<span class="txt">https://www.teatulia.com/tea-recipes/earl-of-bengal-cookies.html</span>
+					</p></div>
+				<div class="swiper-slide">		
+					<a href="https://www.teatulia.com/tea-recipes/horchata-tea-recipe.htm" class="toptxt">Horchata Tea</a>
+					<p class="foottxt">
+						<span class="tit">link to the website</span>
+						<span class="txt">https://www.teatulia.com/tea-recipes/horchata-tea-recipe.htm</span>
+					</p></div>
+			</div>
+		</div>
+	</div>
+	<!--menu-->
+	<div class="button btn-group" style="">
+		<a class="btn" href="./country.html">
+			<img src="./assets/country.png" alt="">
+			<p>Country</p>
+
+		</a>
+		<a class="btn" href="./type.html">
+			<img src="./assets/type.png" alt="">
+			<p>Type</p>
+		</a>
+		<a class="btn" href="./production.html">
+			<img src="./assets/production.png" alt="">
+			<p>Production</p>
+		</a>
+		<a class="btn" href="./brewing.html">
+			<img src="./assets/brewing.png" alt="">
+			<p>Brewing</p>
+		</a>
+		<a class="btn" href="./recipes.html">
+			<img src="./assets/recipe.png" alt="">
+			<p>Recipes</p>
+		</a>
+	</div>
+<script>
+	var mySwiper = new Swiper('.swiper-container', {
+		loop: true,//可选选项，自动滑动
+		slidesPerView : 3,
+spaceBetween : 20
+	})
+
+</script>
+
+
+</body>
+</html>

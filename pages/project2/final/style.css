@@ -12,6 +12,7 @@ a {
   text-decoration: none;
 }
 
+
 #home {
   position: absolute;
   top: 2rem;
@@ -233,6 +234,7 @@ body #map .c6 .box {
   display: block;
 }
 
+
 .btn-group {
   display: flex;
   position: absolute;
@@ -245,6 +247,12 @@ body #map .c6 .box {
   background-color: #eaca78;
   margin: 0 35px;
   height: 75px;
+  border-radius: 15px;
+}
+.btn-group .btn:hover{
+  background-color: #e8d299;
+  border-radius: 25px;
+  height: 80px;
 }
 
 .btn-group .btn img {
