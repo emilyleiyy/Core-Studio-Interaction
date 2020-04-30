@@ -25,20 +25,35 @@
 	    	display: block;
 	    	margin: auto;
 	    }
-	    .image{
-	    	width: 45%;
+	    #p1{
 	    	float: left;
 	    	margin-top: 5rem;
 	    	margin-left: 2rem;
+	    	width: 45%;
+	    }
+	    #p2{
+	    	float: left;
+	    	margin-top: 10rem;
+	    	margin-left: 5rem;
+	    	width: 40%;
 	    }
 	    button{
 	    	padding: 2rem;
 	    	background-color: #667D95;
 	    	border: 5px solid white;
+	    }
+	    #b1{
 	    	margin-top: 15rem;
-	    	margin-right: 15rem;
+	    	margin-right: 13rem;
 	    	float: right;
 	    }
+	    #b2{
+	    	margin-top: 40rem;
+	    	margin-right: 13rem;
+	    	float: right;
+	    	margin-bottom: 10rem;
+	    }
+
 	    button:hover{
 	    	background-color: lightgrey;
 	    }
@@ -50,10 +65,16 @@
 	<h1>Micro-interaction Prototypes</h1>
 
 	<a href="https://xd.adobe.com/view/505495f0-710e-4839-675c-3d463a2dd837-2665/">
-	<button><h2>Link to the Prototype</h2></button>
+	<button id="b1"><h2>Link to the Prototype Version1</h2></button>
 	</a>
 
-	<img class="image" src="assets/prototype1.png">
+	<img id="p1" src="assets/prototype1.png">
+
+	<a href="prototype2/lightcontrol.html">
+	<button id="b2"><h2>Link to the Prototype Version2</h2></button>
+	</a>
+
+	<img id="p2" src="assets/prototype2.png">
 
 
 </body>

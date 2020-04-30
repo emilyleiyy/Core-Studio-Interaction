@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brightness Demo</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+			var cur_level = 14;
+			const max_level = 16;
+			var bright = document.getElementById('brightness');
+			var shade = document.getElementById('shade');
+			for (let i = 1; i <= max_level; i++) {
+				let o = document.createElement('span');
+				let cls = (i <= cur_level)? 'on': 'off';
+				o.classList.add(cls);
+				bright.appendChild(o);
+			}
+			
+			function setBrightness(incr) {
+				cur_level += incr;
+				if (cur_level < 0) {
+					cur_level = 0;
+				} else if (cur_level > max_level) {
+					cur_level = max_level;
+				}
+				var e = bright.firstElementChild;
+				var i = 1;
+				while (e) {
+					e.classList.remove('on');
+					e.classList.remove('off');
+					let cls = (i <= cur_level)? 'on': 'off';
+					e.classList.add(cls);
+					e = e.nextElementSibling;
+					i++;
+				}
+				var alpha;
+				if (cur_level == 0) {
+					alpha = 0.95;
+				} else {
+					alpha = 1 - (cur_level/max_level).toFixed(2);
+				}
+				shade.style.backgroundColor = 'rgba(0,0,0,' + alpha + ')';
+			}
+			
+			document.addEventListener('keydown', function(ev) {
+				switch (ev.key) {
+					case 'Left': // IE/Edge specific value
+					case 'ArrowLeft':
+						// brightness down
+						setBrightness(-1);
+						break;
+					case 'Right': // IE/Edge specific value
+					case 'ArrowRight':
+						// brightness up
+						setBrightness(1);
+						break;
+				}
+			}, false);
+			
+			var timer = 0;
+			var reverse = false;
+			function autoPlay() {
+				if (timer > 0) {
+					clearTimeout(timer);
+				}
+				if (reverse) {
+					setBrightness(1);
+					if (cur_level > 13) {
+						return;
+					}
+				} else {
+					setBrightness(-1);
+					if (cur_level < 6) {
+						reverse = true;
+					}
+				}
+				timer = setTimeout(autoPlay, 300);
+			}
+			
+			autoPlay();
+		}, false);
+</script>
+
+
+
+<body>
+	<div class="wrapper">
+		<div class="inner">
+			<div id="brightness"></div>
+			</div><!--inner-->
+	</div>
+	
+	<div id="shade"></div>
+</body>
+</html>

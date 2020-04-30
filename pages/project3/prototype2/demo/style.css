@@ -1,0 +1,48 @@
+body{
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: sans-serif;
+}
+
+/*.wrapper{
+	margin-top: 20vh;
+}
+@media screen and (max-width: 767px){
+	.wrapper{
+		margin-top: 20px;
+	}
+}*/
+
+.inner{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 400px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+#brightness{
+	text-align: center;
+}
+#brightness span{
+	display: inline-block;
+	width: 25px;
+	height: 16px;
+	border: solid 1px #FFFFFF;
+}
+/*#brightness span.on{
+	background-color: rgba(200,200,200,0.2);
+}*/
+#brightness span.off{
+	background-color: #FFFFFF;
+}
+#shade{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0);
+}
