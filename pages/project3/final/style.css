@@ -1,0 +1,255 @@
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+  }
+  img {
+    margin: 0;
+    padding: 0;
+  }
+  #bk1 {
+    position: fixed;
+    top: 53px;
+    left: 0;
+  }
+  #bk2 {
+    position: fixed;
+    top: 704px;
+    left: 0;
+  }
+  #t1 {
+    position: fixed;
+    top: 518px;
+    left: 296px;
+    animation: moving 1.5s infinite;
+  }
+  #t2 {
+    position: fixed;
+    top: 378px;
+    left: 32px;
+    animation: moving 2s infinite;
+  }
+  @keyframes moving {
+    0% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+  #d1 {
+    position: fixed;
+    top: 38px;
+    left: 320px;
+    animation: sparkle 1.5s infinite;
+  }
+  #d2 {
+    position: fixed;
+    top: 607px;
+    left: 330px;
+    animation: sparkle 1.2s infinite;
+  }
+  #d3 {
+    position: fixed;
+    top: 607px;
+    left: 11px;
+    animation: sparkle 1s infinite;
+  }
+  #d4 {
+    position: fixed;
+    top: 357px;
+    left: 75px;
+    animation: sparkle 1.8s infinite;
+  }
+  @keyframes sparkle {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .lightness {
+    z-index: 999;
+    overflow: hidden;
+  }
+  #circle {
+    position: fixed;
+    top: 61px;
+    left: 42px;
+    width: 310px;
+    height: 310px;
+    z-index: 9;
+  }
+  #circle .circlebj {
+    display: block;
+    width: 100%;
+  }
+  #circle .ball {
+    position: absolute;
+    width: 390px;
+    height: 390px;
+    left: -40px;
+    top: -40px;
+  }
+  #plus {
+    position: fixed;
+    top: 325px;
+    left: 144px;
+  }
+  #minus {
+    position: fixed;
+    top: 325px;
+    left: 200px;
+  }
+  #line {
+    position: fixed;
+    top: 379px;
+    left: 196px;
+    z-index: 0;
+  }
+  #onoff {
+    position: fixed;
+    top: 461px;
+    left: 165px;
+    z-index: 12;
+  }
+  #living {
+    position: fixed;
+    top: 615px;
+    left: 140px;
+  }
+  #circle2 {
+    position: fixed;
+    top: 654px;
+    left: 18px;
+  }
+  #menu {
+    position: fixed;
+    top: 21px;
+    left: 21px;
+  }
+  #p1 {
+    position: fixed;
+    top: 21px;
+    left: 60px;
+  }
+  /*.wrapper{
+		margin-top: 20vh;
+	}
+	@media screen and (max-width: 767px){
+		.wrapper{
+			margin-top: 20px;
+		}
+	}*/
+  .inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  #brightness {
+    text-align: center;
+  }
+  #brightness span {
+    display: inline-block;
+    width: 25px;
+    height: 16px;
+    /*border: solid 0.01px #FFFFFF;*/
+  }
+  /*#brightness span.on{
+		background-color: rgba(200,200,200,0.2);
+	}*/
+  #brightness span.off {
+    /*background-color: #FFFFFF;*/
+  }
+  #shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 11;
+    opacity: 0.9;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+#bk{
+  opacity: 50%;
+  z-index: -999;
+}
+
+.add{
+  background: url(assets/add.png) no-repeat;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.add:hover{
+  background: url(assets/add2.png) no-repeat;
+}
+
+/*
+#add{
+  position: absolute;
+  top: 500px;
+  left: 150px;
+}
+#add:hover{
+  background: url(assets/add2.png);
+
+}
+#setting{
+  position: absolute;
+  top: 900px;
+  left: 150px;
+}
+#light{
+  position: absolute;
+  top: 1300px;
+  left: 150px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

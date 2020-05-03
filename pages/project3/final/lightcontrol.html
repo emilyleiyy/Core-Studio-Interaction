@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Micro-interaction prototype</title>
+	<meta name="viewport" content="initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<script type="text/javascript">
+	// document.addEventListener('DOMContentLoaded', function () {
+	// 	var cur_level = 14;
+	// 	const max_level = 16;
+	// 	var bright = document.getElementById('brightness');
+	// 	var shade = document.getElementById('shade');
+	// 	for (let i = 1; i <= max_level; i++) {
+	// 		let o = document.createElement('span');
+	// 		let cls = (i <= cur_level) ? 'on' : 'off';
+	// 		o.classList.add(cls);
+	// 		bright.appendChild(o);
+	// 	}
+
+	// 	function setBrightness(incr) {
+	// 		cur_level += incr;
+	// 		if (cur_level < 0) {
+	// 			cur_level = 0;
+	// 		} else if (cur_level > max_level) {
+	// 			cur_level = max_level;
+	// 		}
+	// 		var e = bright.firstElementChild;
+	// 		var i = 1;
+	// 		while (e) {
+	// 			e.classList.remove('on');
+	// 			e.classList.remove('off');
+	// 			let cls = (i <= cur_level) ? 'on' : 'off';
+	// 			e.classList.add(cls);
+	// 			e = e.nextElementSibling;
+	// 			i++;
+	// 		}
+	// 		var alpha;
+	// 		if (cur_level == 0) {
+	// 			alpha = 0.95;
+	// 		} else {
+	// 			alpha = 1 - (cur_level / max_level).toFixed(2);
+	// 		}
+	// 		shade.style.backgroundColor = 'rgba(0,0,0,' + alpha + ')';
+	// 	}
+
+	// 	document.addEventListener('keydown', function (ev) {
+	// 		switch (ev.key) {
+	// 			case 'Left': // IE/Edge specific value
+	// 			case 'ArrowLeft':
+	// 				// brightness down
+	// 				setBrightness(-1);
+	// 				break;
+	// 			case 'Right': // IE/Edge specific value
+	// 			case 'ArrowRight':
+	// 				// brightness up
+	// 				setBrightness(1);
+	// 				break;
+	// 		}
+	// 	}, false);
+
+	// 	var timer = 0;
+	// 	var reverse = false;
+
+	// 	function autoPlay() {
+	// 		if (timer > 0) {
+	// 			clearTimeout(timer);
+	// 		}
+	// 		if (reverse) {
+	// 			setBrightness(1);
+	// 			if (cur_level > 13) {
+	// 				return;
+	// 			}
+	// 		} else {
+	// 			setBrightness(-1);
+	// 			if (cur_level < 6) {
+	// 				reverse = true;
+	// 			}
+	// 		}
+	// 		timer = setTimeout(autoPlay, 300);
+	// 	}
+
+	// 	// autoPlay();
+	// }, false);
+</script>
+
+
+
+
+
+<body>
+	<!--background-->
+	<div class="background">
+		<img id="bk1" src="assets/bk1.png" width="100%">
+		<img id="bk2" src="assets/bk2.png" width="100%">
+		<img id="t1" src="assets/t1.png">
+		<img id="t2" src="assets/t2.png">
+		<img id="d1" src="assets/d1.png">
+		<img id="d2" src="assets/d2.png">
+		<img id="d3" src="assets/d3.png">
+		<img id="d4" src="assets/d4.png">
+	</div>
+
+
+
+	<!--lightness-->
+	<div class="lightness">
+		<div id="circle">
+			<img class="circlebj" src="assets/circle.png">
+			<img class="ball" src="assets/ball.png" alt="">
+		</div>
+		<!--<img id="plus" src="assets/plus.png">
+		<img id="minus" src="assets/minus.png">-->
+		<img id="line" src="assets/line.png">
+		<img id="onoff" src="assets/onoff.png">
+	</div>
+
+
+
+	<!--location-->
+	<div class="location">
+		<img id="circle2" src="assets/circle2.png">
+		<img id="living" src="assets/living.png">
+	</div>
+
+
+
+	<!--menu-->
+	<a href="">
+	<img id="menu" src="assets/menu.png">
+	</a>
+
+
+	<!--brightness of screen-->
+	<div class="wrapper">
+		<div class="inner">
+			<div id="brightness"></div>
+		</div>
+		<!--inner-->
+	</div>
+
+	<div id="shade"></div>
+
+
+
+
+	<script src="./assets/jquery-1.8.3.min.js"></script>
+	<script src="./assets/1.js"></script>
+	<script>
+		$(function () {
+			var degree = 10;
+			var startx, starty;
+			//获得角度
+			function getAngle(angx, angy) {
+				return Math.atan2(angy, angx) * 180 / Math.PI;
+			};
+
+			//根据起点终点返回方向 1向上 2向下 3向左 4向右 0未滑动
+			function getDirection(startx, starty, endx, endy) {
+				var angx = endx - startx;
+				var angy = endy - starty;
+				var result = 0;
+
+				//如果滑动距离太短
+				if (Math.abs(angx) < 2 && Math.abs(angy) < 2) {
+					return result;
+				}
+
+				var angle = getAngle(angx, angy);
+				if (angle >= -135 && angle <= -45) {
+					result = 1;
+				} else if (angle > 45 && angle < 135) {
+					result = 2;
+				} else if ((angle >= 135 && angle <= 180) || (angle >= -180 && angle < -135)) {
+					result = 3;
+				} else if (angle >= -45 && angle <= 45) {
+					result = 4;
+				}
+
+				return result;
+			}
+			//手指接触屏幕
+			document.addEventListener("touchstart", function (e) {
+				startx = e.touches[0].pageX;
+				starty = e.touches[0].pageY;
+			}, false);
+			//手指离开屏幕
+			document.addEventListener("touchend", function (e) {
+				var endx, endy;
+				endx = e.changedTouches[0].pageX;
+				endy = e.changedTouches[0].pageY;
+				var direction = getDirection(startx, starty, endx, endy);
+				var angx = endx - startx;
+				var angy = endy - starty;
+				switch (direction) {
+					case 0:
+						break;
+					case 1:
+						console.log("向上！")
+						// console.log(-angy * 1)
+
+						if (degree < 100) {
+							console.log(degree)
+
+							if ((degree + ((-angy * 1) / 10) < 100)) {
+								degree = degree + ((-angy * 1) / 10);
+							} else {
+								degree = 100
+							}
+							run()
+						} else {
+							degree = 100;
+						}
+						break;
+					case 2:
+						console.log(degree)
+						if (degree > 0) {
+							if ((degree - ((angy * 1) / 10) > 0)) {
+								degree = degree + ((-angy * 1) / 10);
+							} else {
+								degree = 0
+							}
+						} else {
+							degree = 0;
+						}
+						run()
+						break;
+					default:
+				}
+			}, false);
+			$('#onoff').on('click', function () {
+				if(degree!=0){
+					degree = 0;
+					run()
+				}else{
+					degree = 100;
+					run()
+				}
+
+			})
+
+			function run() {
+				var deg = 360 * degree / 100;
+				// $('.ball').animate({
+				// 	'transform': 'rotate(' + deg + 'deg)'
+				// }, 500)
+				// $('.ball').animate({}, 5000, function () {
+				// 	$(this).css({
+				// 		'transform': 'rotate(' + deg + 'deg)'
+				// 	});
+				// })
+				var t = 1000;
+
+				$(".ball").animate(
+
+					{
+						borderSpacing: deg
+					}, //180 指旋转度数
+
+					{
+
+						step: function (deg, fix) {
+
+							$(this).css('-webkit-transform', 'rotate(' + deg + 'deg)');
+
+							$(this).css('-ms-transform', 'rotate(' + deg + 'deg)');
+
+							$(this).css('-moz-transform', 'rotate(' + deg + 'deg)');
+
+							$(this).css('-o-transform', 'rotate(' + deg + 'deg)');
+
+							$(this).css('-transform', 'rotate(' + deg + 'deg)');
+
+						},
+						durantion: t
+					}, 'linear')
+				$('#shade').animate({
+					opacity:(1-degree / 100) 
+				})
+			}
+
+		})
+	</script>
+</body>
+
+</html>
